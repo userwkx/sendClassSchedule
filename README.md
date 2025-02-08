@@ -1,22 +1,22 @@
 ## 目录结构：
 
 ```
-├── data/         # 存放由handle_data.py转换excel后写入的信息
-│   ├── course_data.py         # 存放课程表的信息 
-│   ├── receiver_data.py         # 存放收件人信息
-├── excel_files/         # 该目录下存放excel，下面是两个	示例可替换
+├── data/                         # 存放由handle_data.py转换excel后写入的信息
+│   ├── course_data.py            # 存放课程表的信息 
+│   ├── receiver_data.py          # 存放收件人信息
+├── excel_files/                  # 该目录下存放excel，下面是两个	示例可替换
 │   ├── course_excel.xlsx					
 │   ├── receiver_excel.xlsx					
-├── log/         # 存放运行产生的日志
+├── log/                          # 存放运行产生的日志
 │   ├── email_log.log
 ├── tools/													
-│   ├── handle_data.py         # 将excel转换为目标格式
-│   ├── send_subject_table.py         # 发送的信息以及配置信息
-│   ├── weather_info.py         # 实时获取天气
-├── main.py         # 主程序入口
-├── LICENSE         # 许可证文件
-├── requirements.txt         # 依赖项列表
-├── README.MD         # 项目说明文件
+│   ├── handle_data.py            # 将excel转换为目标格式
+│   ├── send_subject_table.py     # 发送的信息以及配置信息
+│   ├── weather_info.py           # 实时获取天气
+├── main.py                       # 主程序入口
+├── LICENSE                       # 许可证文件
+├── requirements.txt              # 依赖项列表
+├── README.MD                     # 项目说明文件
 ```
 
 ## 效果展示：
