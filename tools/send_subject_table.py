@@ -35,18 +35,18 @@ def subject_table_list(receiver):
     course_contents = []
     select_contents = []
     for course in COURSES[weekday]:
-        if semester_week in course['weeks']:
-            if not course['courser']:
-                course_content = f"""
-                    <tr>
-                        <td>{course['course']}</td>
-                        <td>{course['time']}</td>
-                        <td>{course['location']}</td>
-                        <td>{course['teacher']}</td>
-                    </tr>"""
-                course_contents.append(course_content)
-            else:
-                if course['courser'] == receiver:
+        if course['courser'] == receiver:
+            if semester_week in course['weeks']:
+                if course['nature'] == "必修":
+                    course_content = f"""
+                        <tr>
+                            <td>{course['course']}</td>
+                            <td>{course['time']}</td>
+                            <td>{course['location']}</td>
+                            <td>{course['teacher']}</td>
+                        </tr>"""
+                    course_contents.append(course_content)
+                else:
                     select_content = f"""
                         <tr>
                             <td>{course['course']}</td>

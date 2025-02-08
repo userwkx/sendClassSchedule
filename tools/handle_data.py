@@ -28,6 +28,10 @@ def time_data_return(s):
 def courses_to_list(path):
     courses = ['姓名','课程名', '上课周次', '上课星期', '开始节次', '结束节次', '上课教师', '教室名称','课程性质']
     df = pd.read_excel(path, header=0, na_values=['nan', '暂无信息'])
+    # df.fillna('暂无信息', inplace=True)
+    # Explicitly cast float64 columns to object type
+    float64_columns = df.select_dtypes(include=['float64']).columns
+    df[float64_columns] = df[float64_columns].astype(object)
     df.fillna('暂无信息', inplace=True)
     for course in courses:
         if course not in df.columns:
@@ -66,12 +70,15 @@ def Courses_data_return(path):
         weeks_data = weeks_data_return(data['上课周次'])
         teacher = data['上课教师']
         weekday = data['上课星期']
-        if data['课程性质'] == '选修':
-            courser = data['姓名']
-        else:
-            courser = ''
+        courser = data['姓名']
+        nature = data['课程性质']
+        # if data['课程性质'] == '选修':
+        #     courser = data['姓名']
+        # else:
+        #     courser = ''
         concrete_course = {
             "courser": courser,
+            "nature": nature,
             "course": course_data,
             "time": time_data,
             "location": location_data,
@@ -90,6 +97,7 @@ def json_format_couerse(path):
         for course in courses:
             course_str = "        {\n"
             course_str += f'            "courser": "{course["courser"]}",\n'
+            course_str += f'            "nature": "{course["nature"]}",\n'
             course_str += f'            "course": "{course["course"]}",\n'
             course_str += f'            "time": "{course["time"]}",\n'
             course_str += f'            "location": "{course["location"]}",\n'
