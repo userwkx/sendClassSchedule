@@ -51,5 +51,7 @@
 6. 发送的内容可以自己在`tools/send_subject_table.py`中编辑`course_not_none()`和`course_none()`函数中的`html`代码
 
 7. 可根据自己的开学时间修改`tools/send_subject_table.py`下的`semester_day_start()`函数，默认是`2025年2月17日`
+   
+9. 运行`main.py`
 
-8. 可部署到服务器上每天定时发送邮件
+10. 可部署到服务器上每天定时发送邮件
