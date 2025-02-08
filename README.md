@@ -27,13 +27,12 @@
 
 **有课时的页面：**
 
-<img src="C:\Users\wkx32\AppData\Roaming\Typora\typora-user-images\image-20250208172816326.png" alt="image-20250208172816326" style="zoom:25%;" />
+<img src="https://github.com/user-attachments/assets/e020fec6-c313-43b1-882d-5749ede2485b" alt="image-20250208172816326" style="zoom:25%;" />
 
 ## 使用说明：
 
 1. `main.py`这里的密码不是邮箱密码,而是`STMP`服务的授权码，开启服务后会获取。
-
-   ![image](https://github.com/userwkx/sendClassSchedule/blob/main/image/image-20250208170702700.png)
+   <img src="https://github.com/userwkx/sendClassSchedule/blob/main/image/image-20250208170702700.png" alt="image-20250208172816326" style="zoom:25%;" />
 
 2. 导入的excel表格时注意事项：
 
