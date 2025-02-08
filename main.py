@@ -11,7 +11,6 @@ if __name__ == '__main__':
 
     # 填写发送邮件的账号
     SENDER_EMAIL = '###########@qq.com'
-
     # 填写STMP授权码
     PASSWORD = '#################'
 

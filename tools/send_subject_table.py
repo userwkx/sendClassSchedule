@@ -28,10 +28,10 @@ def semester_day_end():
 
 # 返回课程列表
 def subject_table_list(receiver):
-    # weekday = week_handel()
-    # semester_week = (semester_day_start() // 7) + 1
-    weekday = '星期二'
-    semester_week = 1
+    weekday = week_handel()
+    semester_week = (semester_day_start() // 7) + 1
+    # weekday = '星期二'
+    # semester_week = 1
     course_contents = []
     select_contents = []
     for course in COURSES[weekday]:
