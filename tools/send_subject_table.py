@@ -26,6 +26,38 @@ def semester_day_end():
     diff = data - datetime.now().date()
     return diff.days
 
+
+# 返回课程列表
+# def subject_table_list(receiver):
+#     weekday = week_handel()
+#     semester_week = (semester_day_start() // 7) + 1
+#     course_contents = []
+#     select_contents = []
+#     for course in COURSES[weekday]:
+#         if semester_week in course['weeks']:
+#             if not course['courser']:
+#                 course_content = f"""
+#                     <tr>
+#                         <td>{course['course']}</td>
+#                         <td>{course['time']}</td>
+#                         <td>{course['location']}</td>
+#                         <td>{course['teacher']}</td>
+#                     </tr>"""
+#                 course_contents.append(course_content)
+#             else:
+#                 if course['courser'] == receiver:
+#                     select_content = f"""
+#                         <tr>
+#                             <td>{course['course']}</td>
+#                             <td>{course['time']}</td>
+#                             <td>{course['location']}</td>
+#                             <td>{course['teacher']}</td>
+#                         </tr>"""
+#                     select_contents.append(select_content)
+#
+#     data_list = [course_contents, select_contents]
+#     return data_list
+
 # 返回课程列表
 def subject_table_list(receiver):
     weekday = week_handel()
@@ -408,5 +440,6 @@ def send_email(sd,pw):
 
 
 if __name__ == '__main__':
+    
     pass
 
