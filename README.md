@@ -37,6 +37,7 @@
 <img src="https://github.com/userwkx/sendClassSchedule/blob/main/image/image-20250208170702700.png" alt="image-20250208172816326" width="300" />
 
 3. 导入的excel表格时注意事项：
+   
    课程信息大概格式如下（略有不同的是，excel多了`姓名`这一列，如果是选修课的话要在姓名列填入选修者姓名，具体可参见第四条）：
 
    <img src="https://github.com/userwkx/sendClassSchedule/blob/main/image/image-20250208190314.png" alt="image-20250208172816326" width="300" />
