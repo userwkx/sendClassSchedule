@@ -23,7 +23,7 @@
 
 **没有课时的页面：**
 
-<img src="C:\Users\wkx32\AppData\Roaming\Typora\typora-user-images\image-20250208172604684.png" alt="image-20250208172604684" style="zoom:25%;" />
+<img src="![image](https://github.com/user-attachments/assets/e020fec6-c313-43b1-882d-5749ede2485b)" alt="image-20250208172604684" style="zoom:25%;" />
 
 **有课时的页面：**
 
