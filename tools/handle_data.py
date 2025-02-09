@@ -26,19 +26,24 @@ def time_data_return(s):
 
 
 def courses_to_list(path):
-    courses = ['姓名','课程名', '上课周次', '上课星期', '开始节次', '结束节次', '上课教师', '教室名称','课程性质']
+    courses = ['姓名', '课程名', '上课周次', '上课星期', '开始节次', '结束节次', '上课教师', '教室名称', '课程性质']
     df = pd.read_excel(path, header=0, na_values=['nan', '暂无信息'])
     # df.fillna('暂无信息', inplace=True)
     # Explicitly cast float64 columns to object type
     float64_columns = df.select_dtypes(include=['float64']).columns
     df[float64_columns] = df[float64_columns].astype(object)
     df.fillna('暂无信息', inplace=True)
+
     for course in courses:
         if course not in df.columns:
             raise ValueError(
                 f"没找到叫'{course}'的列表名，尽量按此命名：['姓名','课程名', '上课周次', '上课星期', '开始节次', '结束节次', '上课教师', '教室名称','课程性质']")
 
     data_list = df[courses].to_dict(orient='records')
+
+    #  '开始节次'
+    data_list.sort(key=lambda x: x['开始节次'])
+
     return data_list
 
 
